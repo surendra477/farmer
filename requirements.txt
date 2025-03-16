@@ -3,7 +3,7 @@ astrapy
 redis
 jsonschema
 pandas
-openai
+openai==0.28
 scikit-learn
 numpy
 python-dotenv
