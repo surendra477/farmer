@@ -73,22 +73,22 @@ class AgriculturalData:
             "code": "en",
             "local_name": "English"
         },
-        "हिंदी": {
-            "code": "hi",
-            "local_name": "Hindi"
-        },
-        "తెలుగు": {
-            "code": "te",
-            "local_name": "Telugu"
-        },
-        "मराठी": {
-            "code": "mr",
-            "local_name": "Marathi"
-        },
-        "ಕನ್ನಡ": {
-            "code": "kn",
-            "local_name": "Kannada"
-        }
+        # "हिंदी": {
+        #     "code": "hi",
+        #     "local_name": "Hindi"
+        # },
+        # "తెలుగు": {
+        #     "code": "te",
+        #     "local_name": "Telugu"
+        # },
+        # "मराठी": {
+        #     "code": "mr",
+        #     "local_name": "Marathi"
+        # },
+        # "ಕನ್ನಡ": {
+        #     "code": "kn",
+        #     "local_name": "Kannada"
+        # }
     }
 
 class CacheManager:
@@ -725,7 +725,56 @@ class ChatbotUI:
             st.session_state.stage = 'metric_selection'  # Explicitly set stage to 'metric_selection'
             st.session_state.context = {}  # Clear context to start fresh
 
+        # if st.button("ChatBot 🚀"):
+        #     st.session_state.language = selected_lang
+        #     st.session_state.stage = 'chatbot'
+        #     st.switch_page("pages/chatbot.py")  
 
+        # # Handle chatbot stage
+        # if st.session_state.get("stage") == "chatbot":
+        #     self.show_chatbot()
+
+    
+    def show_chatbot(self) -> None:
+        st.markdown("### 🤖 AI Agricultural Chatbot")
+
+        # Define system prompt
+        system_prompt = "You are an AI assistant specialized in general agriculture. Provide relevant and helpful information about farming, crops, soil health, and weather conditions."
+
+        # Initialize chat history
+        if "messages" not in st.session_state:
+            st.session_state.messages = [{"role": "system", "content": system_prompt}]
+
+        # Display chat messages (excluding system message)
+        for msg in st.session_state.messages:
+            if msg["role"] != "system":  
+                st.chat_message(msg["role"]).write(msg["content"])
+
+        # Get user input
+        user_input = st.chat_input("Ask me anything about agriculture...")
+
+        if user_input:
+            # Append user message to chat history
+            st.session_state.messages.append({"role": "user", "content": user_input})
+            st.chat_message("user").write(user_input)
+
+            # OpenAI API call
+            openai.api_key = constant.OPENAI_KEY
+            response = openai.ChatCompletion.create(
+                model="gpt-4o-mini",
+                messages=st.session_state.messages,
+                temperature=0.7,
+                max_tokens=150
+            )
+
+            # Get assistant response
+            assistant_response = response["choices"][0]["message"]["content"]
+
+            # Append assistant response to chat history
+            st.session_state.messages.append({"role": "assistant", "content": assistant_response})
+
+            # Display assistant response
+            st.chat_message("assistant").write(assistant_response)
     def show_metric_selection(self) -> None:
         prompt = self.prompt_manager.get_prompt(
             'metric_selection',

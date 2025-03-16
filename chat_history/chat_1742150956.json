@@ -1,0 +1,14 @@
+{
+  "id": "chat_1742150956",
+  "timestamp": "2025-03-17 00:19:16",
+  "messages": [
+    {
+      "role": "user",
+      "content": "hey"
+    },
+    {
+      "role": "assistant",
+      "content": "Error: Could not connect to OpenAI API."
+    }
+  ]
+}
