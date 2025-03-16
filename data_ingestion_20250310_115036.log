@@ -1,0 +1,26 @@
+2025-03-10 11:50:36,787 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-03-10 11:50:40,143 - INFO - Reading CSV file from datafarmer.csv
+2025-03-10 11:50:40,212 - INFO - Original columns: ['Domain Code', 'Domain', 'Area Code', 'Area', 'Element Code', 'Element', 'Item Code', 'Item', 'Year Code', 'Year', 'Unit', 'Value', 'Flag', 'Flag Description', 'Note']
+2025-03-10 11:50:40,212 - INFO - Available columns: ['Domain Code', 'Domain', 'Area Code', 'Area', 'Element Code', 'Element', 'Item Code', 'Item', 'Year Code', 'Year', 'Unit', 'Value', 'Flag', 'Flag Description', 'Note']
+2025-03-10 11:50:40,238 - INFO - Total rows to process: 22597
+2025-03-10 11:50:41,665 - INFO - inserting 100 documents in 'default_keyspaces'
+2025-03-10 11:50:41,665 - INFO - insertMany(chunk) on 'default_keyspaces'
+2025-03-10 11:50:41,665 - INFO - insertMany(chunk) on 'default_keyspaces'
+2025-03-10 11:50:43,555 - INFO - HTTP Request: POST https://279507b1-1129-48a9-8c7b-9175be2856b5-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace/default_keyspaces "HTTP/1.1 401 Unauthorized"
+2025-03-10 11:50:43,793 - INFO - HTTP Request: POST https://279507b1-1129-48a9-8c7b-9175be2856b5-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace/default_keyspaces "HTTP/1.1 401 Unauthorized"
+2025-03-10 11:50:43,794 - ERROR - Error inserting batch: Role unauthorized for operation: Missing token, expecting one in the Token header.. Client error '401 Unauthorized' for url 'https://279507b1-1129-48a9-8c7b-9175be2856b5-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace/default_keyspaces'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401
+2025-03-10 11:50:45,300 - INFO - inserting 100 documents in 'default_keyspaces'
+2025-03-10 11:50:45,301 - INFO - insertMany(chunk) on 'default_keyspaces'
+2025-03-10 11:50:45,301 - INFO - insertMany(chunk) on 'default_keyspaces'
+2025-03-10 11:50:45,890 - INFO - HTTP Request: POST https://279507b1-1129-48a9-8c7b-9175be2856b5-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace/default_keyspaces "HTTP/1.1 401 Unauthorized"
+2025-03-10 11:50:46,439 - INFO - HTTP Request: POST https://279507b1-1129-48a9-8c7b-9175be2856b5-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace/default_keyspaces "HTTP/1.1 401 Unauthorized"
+2025-03-10 11:50:46,440 - ERROR - Error inserting batch: Role unauthorized for operation: Missing token, expecting one in the Token header.. Client error '401 Unauthorized' for url 'https://279507b1-1129-48a9-8c7b-9175be2856b5-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace/default_keyspaces'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401
+2025-03-10 11:50:47,841 - INFO - inserting 100 documents in 'default_keyspaces'
+2025-03-10 11:50:47,841 - INFO - insertMany(chunk) on 'default_keyspaces'
+2025-03-10 11:50:47,841 - INFO - insertMany(chunk) on 'default_keyspaces'
+2025-03-10 11:50:49,733 - INFO - HTTP Request: POST https://279507b1-1129-48a9-8c7b-9175be2856b5-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace/default_keyspaces "HTTP/1.1 401 Unauthorized"
+2025-03-10 11:50:49,889 - INFO - HTTP Request: POST https://279507b1-1129-48a9-8c7b-9175be2856b5-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace/default_keyspaces "HTTP/1.1 401 Unauthorized"
+2025-03-10 11:50:49,890 - ERROR - Error inserting batch: Role unauthorized for operation: Missing token, expecting one in the Token header.. Client error '401 Unauthorized' for url 'https://279507b1-1129-48a9-8c7b-9175be2856b5-us-east-2.apps.astra.datastax.com/api/json/v1/default_keyspace/default_keyspaces'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401
